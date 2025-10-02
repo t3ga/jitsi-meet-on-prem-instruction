@@ -56,9 +56,9 @@
 
 1. Генерация ключа на **Локальной машине!!!**
 ```bash
-ssh-keygen -t ed25519
+ssh-keygen -t ed25519 -С ваш_email@example.com
 # Жми Enter, можно задать пароль для ключа
-cat ~/.ssh/id_ed25519.pub -С ваш_email@example.com
+cat ~/.ssh/id_ed25519.pub 
 ```
 Выведется ключ который далее нужно скопировать **На ваш сервер!!!**
 
@@ -84,10 +84,8 @@ sudo nano /etc/ssh/sshd_config
 Убедись, что строки (без #) такие:
 ```bash
 PasswordAuthentication no
-PermitRootLogin no
-KbdInteractiveAuthentication no
 ChallengeResponseAuthentication no
-PubkeyAuthentication yes
+UsePAM no
 ```
 6. Применяем изменения
 ```bash
@@ -184,7 +182,7 @@ sudo apt update
     *   `Type` A
     *   `Name` meet или любое, какое захотите. Например, если это будет meet путь к вашему миту будет meet.ваш_домен.com
     *   `IPv4 adress` здесь нужно будет опять пойти на [the.hosting](https://client.the.hosting/billmgr?startform=vds), `Главная` → **Товары и Услуги** → **VPS/VDS**, там нажми на три точки у твоего сервака, **Инструкция** IP-адрес и вставить его в CloudFlare.
-    *   `Proxy status` Оставить включённым в Proxied, но если связь будет плохо работать можно будет изменить на DNS only.
+    *   `Proxy status` DNS only. Облачко должно быть серым.
     *   `TTL` 30min
 4. Нажимаем **Save**.
 5. Далее просто пролистайте вниз и нажмите **Continue to activation**.
