@@ -10,7 +10,7 @@
 
 Проксирование через Cloudflare(опционально): [https://www.cloudflare.com](https://www.cloudflare.com/)
 
-Эта же инструкция на Github: [https://github.com/t3ga/jitsi-meet-on-prem-instruction/main/README.md](https://github.com/t3ga/jitsi-meet-on-prem-instruction/blob/main/README.md)
+Эта же инструкция на Github: https://github.com/t3ga/jitsi-meet-on-prem-instruction/blob/main/README.md
 
 Текстовая инструкция:
 
