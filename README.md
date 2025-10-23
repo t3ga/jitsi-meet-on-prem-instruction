@@ -98,14 +98,12 @@ sudo systemctl reload ssh
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y apt-transport-https curl gnupg2 nginx-full sudo
-sudo apt-add-repository -y universe
-sudo apt update
 ```
 
 2. Докинем недостающие репозитории
 ```bash
 sudo apt install software-properties-common -y
-sudo add-apt-repository universe
+sudo add-apt-repository -y universe
 sudo apt update
 ```
 
